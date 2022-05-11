@@ -22,59 +22,60 @@ After jobs run, converted files should be located in the output directory specif
 | ├── C192
 | ├── C384
 | │   ├── gfs.20190925
-|│   │   └── 12
-|│   │       └── atmos
-|│   │           ├── gfs.t12z.loginc.txt
-|│   │           └── INPUT
-|│   │               ├── gfs_ctrl.nc
-|│   │               ├── gfs_data.tile1.nc
-|│   │               ├── gfs_data.tile2.nc
-|│   │               ├── gfs_data.tile3.nc
-|│   │               ├── gfs_data.tile4.nc
-|│   │               ├── gfs_data.tile5.nc
-|│   │               ├── gfs_data.tile6.nc
-|│   │               ├── sfc_data.tile1.nc
-|│   │               ├── sfc_data.tile2.nc
-|│   │               ├── sfc_data.tile3.nc
-|│   │               ├── sfc_data.tile4.nc
-|│   │               ├── sfc_data.tile5.nc
-|│   │               └── sfc_data.tile6.nc
-|│   └── gfs.20220102
-|│       └── 00
-|│           └── atmos
-|│               ├── gfs.t00z.loginc.txt
-|│               └── INPUT
-|│                   ├── gfs_ctrl.nc
-|│                   ├── gfs_data.tile1.nc
-|│                   ├── gfs_data.tile2.nc
-|│                   ├── gfs_data.tile3.nc
-|│                   ├── gfs_data.tile4.nc
-|│                   ├── gfs_data.tile5.nc
-|│                   ├── gfs_data.tile6.nc
-|│                   ├── sfc_data.tile1.nc
-|│                   ├── sfc_data.tile2.nc
-|│                   ├── sfc_data.tile3.nc
-|│                   ├── sfc_data.tile4.nc
-|│                   ├── sfc_data.tile5.nc
-|│                   └── sfc_data.tile6.nc
-|└── C96
-|    ├── gfs.20220101
-|    │   └── 00
-|    │       └── atmos
-|    │           ├── gfs.t00z.loginc.txt
-|    │           └── INPUT
-|    │               ├── gfs_ctrl.nc
-|    │               ├── gfs_data.tile1.nc
-|    │               ├── gfs_data.tile2.nc
-|    │               ├── gfs_data.tile3.nc
-|    │               ├── gfs_data.tile4.nc
-|    │               ├── gfs_data.tile5.nc
-|    │               ├── gfs_data.tile6.nc
-|    │               ├── sfc_data.tile1.nc
-|    │               ├── sfc_data.tile2.nc
-|    │               ├── sfc_data.tile3.nc
-|    │               ├── sfc_data.tile4.nc
-|    │               ├── sfc_data.tile5.nc
-|    │               └── sfc_data.tile6.nc
-|    └── gfs.20220101.tar
+| │   │   └── 12
+| │   │       └── atmos
+| │   │           ├── gfs.t12z.loginc.txt
+| │   │           └── INPUT
+| │   │               ├── gfs_ctrl.nc
+| │   │               ├── gfs_data.tile1.nc
+| │   │               ├── gfs_data.tile2.nc
+| │   │               ├── gfs_data.tile3.nc
+| │   │               ├── gfs_data.tile4.nc
+| │   │               ├── gfs_data.tile5.nc
+| │   │               ├── gfs_data.tile6.nc
+| │   │               ├── sfc_data.tile1.nc
+| │   │               ├── sfc_data.tile2.nc
+| │   │               ├── sfc_data.tile3.nc
+| │   │               ├── sfc_data.tile4.nc
+| │   │               ├── sfc_data.tile5.nc
+| │   │               └── sfc_data.tile6.nc
+| │   └── gfs.20220102
+| │       └── 00
+| │           └── atmos
+| │               ├── gfs.t00z.loginc.txt
+| │               └── INPUT
+| │                   ├── gfs_ctrl.nc
+| │                   ├── gfs_data.tile1.nc
+| │                   ├── gfs_data.tile2.nc
+| │                   ├── gfs_data.tile3.nc
+| │                   ├── gfs_data.tile4.nc
+| │                   ├── gfs_data.tile5.nc
+| │                   ├── gfs_data.tile6.nc
+| │                   ├── sfc_data.tile1.nc
+| │                   ├── sfc_data.tile2.nc
+| │                   ├── sfc_data.tile3.nc
+| │                   ├── sfc_data.tile4.nc
+| │                   ├── sfc_data.tile5.nc
+| │                   └── sfc_data.tile6.nc
+| └── C96
+|     ├── gfs.20220101
+|     │   └── 00
+|     │       └── atmos
+|     │           ├── gfs.t00z.loginc.txt
+|     │           └── INPUT
+|     │               ├── gfs_ctrl.nc
+|     │               ├── gfs_data.tile1.nc
+|     │               ├── gfs_data.tile2.nc
+|     │               ├── gfs_data.tile3.nc
+|     │               ├── gfs_data.tile4.nc
+|     │               ├── gfs_data.tile5.nc
+|     │               ├── gfs_data.tile6.nc
+|     │               ├── sfc_data.tile1.nc
+|     │               ├── sfc_data.tile2.nc
+|     │               ├── sfc_data.tile3.nc
+|     │               ├── sfc_data.tile4.nc
+|     │               ├── sfc_data.tile5.nc
+|     │               └── sfc_data.tile6.nc
+|     └── gfs.20220101.tar
+
 
