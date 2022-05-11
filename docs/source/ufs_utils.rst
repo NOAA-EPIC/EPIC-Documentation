@@ -18,7 +18,9 @@ Run the driver to submit the HPSS retrieval job and chgres job via::
     ./driver.$MACHINE.sh
 After jobs run, converted files should be located in the output directory specified in config. If not, check log files in …/util/gdas_init. An example of files converted from C768 to C384 and C96 can be found here: /scratch2/NCEPDEV/marine/Cameron.Book/gfs_data/chgres. The corresponding UFS_UTILS configuration used to do the retrievals/conversions (where the config settings can also be viewed) is here: /scratch2/NCEPDEV/marine/Cameron.Book/UFS_UTILS/util/gdas_init.
 
-
+.. toctree::
+   :maxdepth: 2
+   
 chgres/
 
 ├── C192
