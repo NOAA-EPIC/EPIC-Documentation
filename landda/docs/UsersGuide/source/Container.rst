@@ -294,8 +294,6 @@ Users should set ``LANDDAROOT`` to the directory *ABOVE* the ``land-release`` di
 
 Additionally, users should set the following environment variables:
 
-
-
 .. code-block:: console
 
    export JEDI_EXECDIR=$PWD/singularity/bin
@@ -303,6 +301,15 @@ Additionally, users should set the following environment variables:
    export BUILDDIR=$PWD/singularity
 
 Note that the executables in ``singularity/bin`` are links to ``run_container_executable.sh`` that is in ``land-offline_workflow``. The experiment uses the python that is in the container as well. It has pre-built all the python modules. 
+
+Users should open the ``submit_cycle.sh`` script and update the account name to reflect the name of the account (if any) that they use to submit batch jobs on their system. 
+
+.. code-block:: console
+
+   vi submit_cycle.sh
+   i
+   #SBATCH --account=<my_account>
+   :wq
 
 .. _SubmitExpt:
 
