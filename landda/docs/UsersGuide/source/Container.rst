@@ -302,7 +302,7 @@ Additionally, users should set the following environment variables:
 
 Note that the executables in ``singularity/bin`` are links to ``run_container_executable.sh`` that is in ``land-offline_workflow``. The experiment uses the python that is in the container as well. It has pre-built all the python modules. 
 
-Users should open the ``submit_cycle.sh`` script and update the account name to reflect the name of the account (if any) that they use to submit batch jobs on their system. 
+Users should open the ``submit_cycle.sh`` script and update the account name (``<my_account``>) to reflect the name of the account (if any) that they use to submit batch jobs on their system. 
 
 .. code-block:: console
 
@@ -322,8 +322,7 @@ Submit the job using the ``sbatch`` command, and it will run through a cycle.
 
    sbatch submit_cycle.sh settings_cycle_test
 
-
-If all goes well, a full cycle will run with data assimilation (DA) and a forecast.
+The system will output a message such as ``Submitted batch job 41599324``, indicating that the job was successfully submitted. If all goes well, a full cycle will run with data assimilation (DA) and a forecast. To view progress, users can open the log file, 
 
 
 
