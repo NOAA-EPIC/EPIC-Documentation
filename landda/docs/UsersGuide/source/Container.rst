@@ -258,11 +258,11 @@ For more information on the ``qsub`` command options, see the `PBS Manual §2.59
 Set Up the Container
 -----------------------
 
-Save the location of the container in an environment variable:
+Save the location of the container in an environment variable.
 
 .. code-block:: console
 
-   export img=$EPICCONTAINERS/ubuntu20.04-intel-spack-landda.img
+   export img=path/to/ubuntu20.04-intel-spack-landda.img
 
 Load the compiler and :term:`MPI` locally.
 
@@ -270,27 +270,33 @@ Load the compiler and :term:`MPI` locally.
 
    module load intel/2022.3.0 impi/2022.3.0
 
-Copy out the ``land-offline_workflow`` directory from the container to the host file system 
+Copy out the ``land-offline_workflow`` directory from the container to the host file system. 
 
 .. code-block:: console
 
-   singularity exec $img cp -r /opt/land-offline_workflow 
+   singularity exec $img cp -r /opt/land-offline_workflow .
 
-# make sure to cd into the new directory before setting your env variables
+Navigate to the new ``land-offline_workflow`` directory before setting environment variables.
 
 .. code-block:: console
 
    cd land-offline_workflow
 
-#This is the directory ABOVE your land-release directory
+.. COMMENT: What env variables are we setting???
+
+To run a containerized version of Land DA, users must set several environment variables: ``LANDDAROOT``. 
+Users should set ``LANDDAROOT`` to the directory ABOVE your the land-release directory.
 
 .. code-block:: console
 
-   export LANDDAROOT=$stmp/land-test
+   export LANDDAROOT=path/to/land-da
 
-#We are going to run containerized version of these things, so tell the scripts where to find them 
-#If you look, you will see that the executables in singularity/bin are links to run_container_executable.sh
-#that is in land-offline_workflow/   
+
+
+it is important to tell the scripts where to find them 
+Note that the executables in singularity/bin are links to run_container_executable.sh
+#that is in ``land-offline_workflow``
+
 .. code-block:: console
 
    export JEDI_EXECDIR=$PWD/singularity/bin
@@ -301,17 +307,20 @@ Copy out the ``land-offline_workflow`` directory from the container to the host 
 
    export PYTHON=$PWD/singularity/bin/python
 
-#I think I can consolidate this stuff, but for now, this needs to be set as well
-
 .. code-block:: console
 
    export BUILDDIR=$PWD/singularity
 
-#Now you should be able to just submit the job and it will run through a cycle
+Submit the job using the ``sbatch`` command, and it will run through a cycle.
 
 .. code-block:: console
 
    sbatch submit_cycle.sh settings_cycle_test
+
+
+
+
+
 
 
 Shell into the singularity container by modifying the following command: 
@@ -337,6 +346,8 @@ For example:
    singularity shell -e -B /lustre:/lustre /lustre/ubuntu20.04-intel-spack-landda.img
 
 All the modules built into the container can be loaded up by sourcing the ``/opt/spack-stack/.bashenv`` file. After you source it, you can run ``module list`` to check that the modules are available. 
+
+.. SUBMIT CYCLE ACCOUNT --> DA-CPU
 
 .. code-block:: console
 
