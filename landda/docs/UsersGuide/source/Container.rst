@@ -284,32 +284,25 @@ Navigate to the new ``land-offline_workflow`` directory before setting environme
 
 .. COMMENT: What env variables are we setting???
 
-To run a containerized version of Land DA, users must set several environment variables: ``LANDDAROOT``. 
-Users should set ``LANDDAROOT`` to the directory ABOVE your the land-release directory.
+To run a containerized version of Land DA, users must set several environment variables: ``LANDDAROOT``, ``JEDI_EXECDIR``, ``PYTHON``, ``BUILDDIR``. These variables tell the system where to find required information. 
+
+Users should set ``LANDDAROOT`` to the directory *ABOVE* the ``land-release`` directory.
 
 .. code-block:: console
 
    export LANDDAROOT=path/to/land-da
 
+Additionally, users should set the following environment variables:
 
 
-it is important to tell the scripts where to find them 
-Note that the executables in singularity/bin are links to run_container_executable.sh
-#that is in ``land-offline_workflow``
 
 .. code-block:: console
 
    export JEDI_EXECDIR=$PWD/singularity/bin
-
-#We are going to use the python that is in the container as well. It has all the python-modules pre-built
-
-.. code-block:: console
-
    export PYTHON=$PWD/singularity/bin/python
-
-.. code-block:: console
-
    export BUILDDIR=$PWD/singularity
+
+Note that the executables in ``singularity/bin`` are links to ``run_container_executable.sh`` that is in ``land-offline_workflow``. The experiment uses the python that is in the container as well. It has pre-built all the python modules. 
 
 Submit the job using the ``sbatch`` command, and it will run through a cycle.
 
