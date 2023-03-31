@@ -1,1 +1,12 @@
-
+name: regional_workflow
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - f90nml
+  - jinja2
+  - pyyaml
+  - scipy
+  - matplotlib
+  - pygrib
+  - cartopy
