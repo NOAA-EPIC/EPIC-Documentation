@@ -15,7 +15,7 @@ conda activate base
 conda install -y git-lfs
 conda list
 # Save the list of base conda packages:
-env_recipes="${PREFIX0}/conda3/environments"
+env_recipes="${PREFIX0}/environments"
 [[ -d "$env_recipes" ]] || mkdir -p $env_recipes
 conda list --export > $env_recipes/conda_base_git-lfs.txt
 conda list --explicit > $env_recipes/conda_base_git-lfs.explicit.txt
